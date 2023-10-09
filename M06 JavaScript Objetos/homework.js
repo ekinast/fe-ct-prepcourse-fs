@@ -36,9 +36,9 @@ function agregarPropiedad(objeto, propiedad) {
    // Esta propiedad será igual al valor `null`.
    // Retornar el objeto.
    // Tu código:
-   newObj = objeto;
-   newObj[propiedad] = null;
-   return(newObj);
+ 
+   objeto[propiedad] = null;
+   return(objeto);
 }
 
 function invocarMetodo(objeto, metodo) {
@@ -55,8 +55,10 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
    // El parámetro "objetoMisterioso" posee una propiedad con el nombre "numeroMisterioso".
    // Debes multiplicar este número por 5 y retornar el resultado.
    // Tu código:
+   if (objetoMisterioso.hasOwnProperty("numeroMisterioso")) {
    var newNum = objetoMisterioso.numeroMisterioso * 5;
    return newNum;
+   }
 }
 
 function eliminarPropiedad(objeto, propiedad) {
@@ -129,17 +131,6 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    return usuariosPremium;
    }
     
-    // Ejemplo de uso:
-    /*const usuarios = [
-      { nombre: "Usuario1", esPremium: false },
-      { nombre: "Usuario2", esPremium: false },
-      { nombre: "Usuario3", esPremium: false }
-    ];
-    
-    const usuariosPremium = pasarUsuarioAPremium(usuarios);
-    console.log(usuariosPremium);*/
-    
-
 function sumarLikesDeUsuario(objetoUsuario) {
    // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
    // Este arreglo contiene objetos (post).
@@ -167,21 +158,7 @@ function sumarLikesDeUsuario(objetoUsuario) {
         // Si el objetoUsuario no tiene la propiedad "posts" o no es un arreglo, retornamos 0
         return 0;
     }
-}
-    // Ejemplo de uso:
-    /*const usuario = {
-      nombre: "Usuario1",
-      posts: [
-        { titulo: "Post 1", likes: 10 },
-        { titulo: "Post 2", likes: 5 },
-        { titulo: "Post 3", likes: 8 }
-      ]
-    };
-    
-    const totalLikes = sumarLikesDeUsuario(usuario);
-    console.log("Total de likes del usuario:", totalLikes);*/ // Debería mostrar 23
-    
-
+}  
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
    // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
@@ -219,21 +196,6 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
       }
     }
     
-    // Ejemplo de uso:
-    const producto = {
-      nombre: "Producto1",
-      precio: 10,
-      porcentajeDeDescuento: 0.2
-    };
-    
-    // Agregamos el método de cálculo de descuento al producto
-    agregarMetodoCalculoDescuento(producto);
-    
-    // Calculamos el precio final con descuento
-    const precioFinalConDescuento = producto.calcularPrecioDescuento();
-    console.log("Precio final con descuento:", precioFinalConDescuento); // Debería mostrar 8
-    
-
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
