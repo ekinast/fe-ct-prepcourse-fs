@@ -129,6 +129,12 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    
    // Retornamos el nuevo arreglo con todos los usuarios en modo premium
    return usuariosPremium;
+
+  /* objetoMuchosUsuarios.forEach(function (usuario){
+      usuario.esPremium = true;
+   })
+   return objetoMuchosUsuarios;*/
+
    }
     
 function sumarLikesDeUsuario(objetoUsuario) {
@@ -158,6 +164,7 @@ function sumarLikesDeUsuario(objetoUsuario) {
         // Si el objetoUsuario no tiene la propiedad "posts" o no es un arreglo, retornamos 0
         return 0;
     }
+    /*el profe lo resolvió con .reduce? */
 }  
 
 function agregarMetodoCalculoDescuento(objetoProducto) {

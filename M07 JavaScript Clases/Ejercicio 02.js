@@ -38,19 +38,11 @@ function agregarMetodo() {
    // Ejemplo: "Juan, 22 años".
    // Tu código:
    // Definición de la clase Persona
-  class Persona {
-   constructor(nombre, apellido, edad, domicilio) {
-     this.nombre = nombre;
-     this.apellido = apellido;
-     this.edad = edad;
-     this.domicilio = domicilio;
-   }
-   datos(){
+
+   Persona.prototype.datos = function(){
       return (this.nombre + ', ' + this.edad + ' años');
    }
- }
- return Persona;
-}
+   }
 
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
