@@ -95,9 +95,11 @@ function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-   
-   const numeroMasGrande = Math.max.apply(null, arrayOfNums);
-   return(numeroMasGrande); 
+   resultado = 0;
+   resultado = Math.max(...arrayOfNums);
+   return resultado;
+   // const numeroMasGrande = Math.max.apply(null, arrayOfNums);
+   // return(numeroMasGrande); 
 }
 
 function multiplicarArgumentos() {
@@ -117,7 +119,6 @@ function multiplicarArgumentos() {
       for (let i = 0; i < arguments.length; i++) {
         producto *= arguments[i];
       }
-    
       return producto;
     }
     
@@ -216,7 +217,7 @@ function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-   newMayorACien =[];
+   var newMayorACien = [];
    for (var i = 0; i < array.length; i++){
       if (array[i]> 100){
          newMayorACien.push(array[i]);
@@ -236,7 +237,7 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-   const resultados = [];
+   var resultados = [];
    
    for (let i = 0; i < 10; i++) {
       num += 2;
@@ -262,11 +263,12 @@ function continueStatement(num) {
    var suma = num;
    for (var i = 0; i < 10; i++){  
       
-      if (i !== 5){
-         console.log('i  ' + i)
-;         suma = suma + 2;
+      if (i === 5){
+         continue;
+      }else {
+         suma = suma + 2;
          arreglo.push(suma);
-      }else;
+      };
    }
    return(arreglo);
 }

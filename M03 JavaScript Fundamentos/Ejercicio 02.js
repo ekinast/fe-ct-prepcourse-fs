@@ -44,10 +44,6 @@ function obtenerResto(x, y) {
         return x % y;
     }
     
-    // Ejemplo de uso:
-    var resultado = obtenerResto(10, 3);
-    console.log(resultado); // Esto imprimirá 1, ya que 10 dividido por 3 tiene un resto de 1.
-    
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

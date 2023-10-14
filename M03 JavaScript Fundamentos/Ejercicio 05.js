@@ -80,12 +80,6 @@ function esVocal(letra) {
       } else {
         return "Dato incorrecto";
       }
-    
-    // Ejemplo de uso:
-    console.log(esVocal("a")); // Esto imprimirá "Es vocal" porque 'a' es una vocal.
-    console.log(esVocal("B")); // Esto imprimirá "Dato incorrecto" porque 'B' no es una vocal.
-    console.log(esVocal("ae")); // Esto imprimirá "Dato incorrecto" porque la entrada tiene más de un carácter.
-    
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
