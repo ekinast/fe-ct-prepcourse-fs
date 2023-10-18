@@ -119,21 +119,21 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Tu código:
 
    // Utilizamos el método map para crear un nuevo arreglo con los objetos de usuario modificados
-   const usuariosPremium = objetoMuchosUsuarios.map(usuario => {
+   /*var usuariosPremium = objetoMuchosUsuarios.map(usuario => {
       // Copiamos el objeto de usuario original usando el operador de propagación (spread)
-      const usuarioPremium = { ...usuario };
+      var usuarioPremium = { ...usuario };
       // Establecemos la propiedad "esPremium" en true en el nuevo objeto
       usuarioPremium.esPremium = true;
       return usuarioPremium;
    });
    
    // Retornamos el nuevo arreglo con todos los usuarios en modo premium
-   return usuariosPremium;
+   return usuariosPremium;*/
 
-  /* objetoMuchosUsuarios.forEach(function (usuario){
+  objetoMuchosUsuarios.forEach(function (usuario){
       usuario.esPremium = true;
    })
-   return objetoMuchosUsuarios;*/
+   return objetoMuchosUsuarios;
 
    }
     
@@ -144,7 +144,7 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // Debes sumar los likes de todos los post y retornar el resultado.
    // Tu código:
 
-      // Verificamos si el objetoUsuario tiene la propiedad "posts" y si es un arreglo
+   /*   // Verificamos si el objetoUsuario tiene la propiedad "posts" y si es un arreglo
       if (objetoUsuario.hasOwnProperty("posts") && Array.isArray(objetoUsuario.posts)) {
         // Inicializamos una variable para acumular los likes
         let totalLikes = 0;
@@ -164,7 +164,13 @@ function sumarLikesDeUsuario(objetoUsuario) {
         // Si el objetoUsuario no tiene la propiedad "posts" o no es un arreglo, retornamos 0
         return 0;
     }
-    /*el profe lo resolvió con .reduce? */
+    */ //Usamos la función reduce sobre el array que contiene los likes y como
+    //segundo parámetro le decimos que el valor inicial es 0
+    var suma = objetoUsuario.posts.reduce(function(acumulador, post){
+      acumulador = acumulador + post.likes;
+      return acumulador;
+    }, 0)
+    return suma;
 }  
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
@@ -187,9 +193,9 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
         // Agregamos la propiedad "calcularPrecioDescuento" como una función al objetoProducto
         objetoProducto.calcularPrecioDescuento = function() {
           // Calculamos el precio con descuento
-          const precioSinDescuento = objetoProducto.precio;
-          const porcentajeDeDescuento = objetoProducto.porcentajeDeDescuento;
-          const precioConDescuento = precioSinDescuento - precioSinDescuento * porcentajeDeDescuento;
+          var precioSinDescuento = this.precio;
+          var porcentajeDeDescuento = this.porcentajeDeDescuento;
+          var precioConDescuento = precioSinDescuento - precioSinDescuento * porcentajeDeDescuento;
     
           // Retornamos el precio final con descuento
           return precioConDescuento;

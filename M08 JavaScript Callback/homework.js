@@ -27,12 +27,13 @@ function sumarArray(arrayOfNumbers, cb) {
    // Recibes un arreglo de números y un callback.
    // Suma todos los números del arreglo.
    // Este resultado debes pasárselo como argumento al callback recibido.
-   // [NOTA]: no debes reotrnar nada.
+   // [NOTA]: no debes retornar nada.
    // Tu código:
    var resultado = 0;
-   for (var i = 0; i < arrayOfNumbers.length; i++){
+   /*for (var i = 0; i < arrayOfNumbers.length; i++){
       resultado = resultado + arrayOfNumbers[i];
-   }
+   }*/
+   resultado = arrayOfNumbers.reduce((acumulador,currentValue) => acumulador + currentValue, resultado);
    cb(resultado);
 }
 
@@ -48,7 +49,8 @@ function forEach(array, cb) {
 
 function map(array, cb) {
    // Debes iterar sobre el arreglo, y cada elemento pasárselo como arguemento al callback.
-   // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
+   // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de 
+   //un nuevo arreglo.
    // Retorna el nuevo arreglo.
    // Tu código:
    newArray = [];
@@ -59,7 +61,7 @@ function map(array, cb) {
 }
 
 function filter(arrayOfStrings) {
-   // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
+   // Debes identificar todos los elementos del arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
    newArray = [];
