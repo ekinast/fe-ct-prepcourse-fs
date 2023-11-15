@@ -37,18 +37,18 @@
 // console.log(miSegundoAuto);
 // console.log(miSegundoAuto.marca);
 
-class Football{
-    constructor(jugador){
-        this.jugador = jugador;
-    }
+class Football {
+  constructor(jugador) {
+    this.jugador = jugador;
+  }
 
-    obtenerNombre() {
-        console.log(this.jugador)
-    }
+  obtenerNombre() {
+    console.log(this.jugador);
+  }
 }
 
-var argentina = new Football('Messi');
-var brasil = new Football('Pele');
+var argentina = new Football("Messi");
+var brasil = new Football("Pele");
 
 argentina.obtenerNombre();
 brasil.obtenerNombre();
